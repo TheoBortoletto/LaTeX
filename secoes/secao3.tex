@@ -1,0 +1,44 @@
+\section{Valores absolutos e valores relativos}
+Do modo como foi apresentado até aqui, o cálculo de ganho ou perda de um sistema em decibel terá como resposta um valor absoluto. Dizer que um amplificador tem ganho de 30 dB significa dizer que ele aumenta uma potência de entrada em 1000 vezes.
+
+Uma linha de transmissão que tem uma perda de 20 dB, atenua a potência de entrada em 100 vezes. Perceba que o resultado obtido (1000 vezes) independe da unidade de medida utilizada (watts).
+
+Usando as propriedades matemáticas dos logaritmos é fácil perceber que para saber em quantas vezes é o ganho ou perda de um sistema para um valor em dB é calculado pela equação 4.
+
+$$
+X(vezes)= 10^{\frac{dB}{10}}
+$$
+
+\begin{center}
+    Equação 4 – Cálculo de quantas vezes representa um ganho/perda em decibel.
+\end{center}
+
+Na eletrônica pode ser conveniente relacionar o decibel a uma referência. O valor a ser encontrado será relativo à unidade de medida usada como referência. Um exemplo é a unidade dBm. Ela representa a medida de potências em relação a 1 mW, como pode ser visto na equação 5.
+
+Assim, pode-se converter valores de watts para dBm. Esta medida não representa o ganho ou a perda de um sistema, e sim um valor de potência que é emitido ou recebido por um equipamento.
+
+$$
+Potencia(dBm)=10 \cdot \log\left (\frac{P(W)}{0.001W}\right )
+$$
+
+\begin{center}
+    Equação 5 – Potência de um equipamento, em dBm.
+\end{center}
+
+Veja na equação 6 como se calculam, em dBm, valores de potência de 30W, 1 mW e 150 W.
+
+$$
+    Potencia(dBm)=10 \cdot \log\left (\frac{P_{saida}}{1mW}\right ) = 10 \cdot \log\left (\frac{P_{saida}}{30\mu W}\right ) = 10 \cdot \log\left (0.03 \right )=-15.22dBm
+$$
+$$
+    Potencia(dBm)=10 \cdot \log\left (\frac{P_{saida}}{1mW}\right ) = 10 \cdot \log\left (\frac{1mW}{1mW}\right ) = 10 \cdot \log\left (1 \right )=0dBm
+$$
+$$
+    Potencia(dBm)=10 \cdot \log\left (\frac{P_{saida}}{1mW}\right ) = 10 \cdot \log\left (\frac{150W}{1mW}\right ) = 10 \cdot \log\left (150000 \right )=51.76dBm
+$$
+
+\begin{center}
+    Equação 6 – Potências em watts convertidas para dBm.
+\end{center}
+
+Os resultados mostram que valores negativos são gerados por potências menores que o valor da referência. Valores positivos, por sua vez, são gerados por potências maiores que a referência.
